@@ -8,6 +8,7 @@ flask-cors = "*"
 flask-restful = "*"
 flask-migrate = "*"
 flask-login = "*"
+faker = "*"
 
 [dev-packages]
 
