@@ -86,3 +86,18 @@ pipenv install
 - pipenv run flask run  
   
 The backend server will be running at http://127.0.0.1:5000/.
+
+### Frontend Setup
+#### Navigate to Frontend Folder:
+- cd ../safari-map-ui
+
+
+### Install Frontend Dependencies:
+- npm install
+
+
+### Run the Frontend Development Server:
+- npm start
+
+
+The frontend development server will be running at http://localhost:3000/.
