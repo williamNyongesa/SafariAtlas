@@ -22,7 +22,7 @@ Others: HTML5, CSS3, JavaScript (ES6), Bootstrap
 Here's a detailed list of the available API endpoints:
 
 1. Index
-- GET /   .    
+- GET /       
 Returns a welcome message for the Safari Map API.
 2. User
 - GET /users  
@@ -30,4 +30,31 @@ Fetch a list of all users.
  
 - GET /user/<int:user_id>  
 Fetch a specific user's details by user ID.
+
+3. Location
+- GET /location  
+Fetch a list of all locations.
+
+- GET /location/<int:location_id>  
+Fetch a specific location's details by location ID.
+
+- POST /location  
+Add a new location (requires authentication).
+
+- DELETE /location/<int:location_id>  
+Remove a location by ID (requires authentication).
+
+4. Weather
+- GET /location/<int:location_id>/weather  
+Fetch weather information for a specific location by location ID.
+
+5. Authentication
+- POST /register  
+Register a new user.
+
+- POST /login  
+Log in an existing user.
+
+- POST /logout  
+Log out the current user.
 
