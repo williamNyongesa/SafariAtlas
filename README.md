@@ -115,8 +115,8 @@ You can use Thunder Client in Visual Studio Code to test the API endpoints. Here
 
 - Body:
 
- {
-  "username": "newuser",
-  "email": "newuser@example.com",
-  "password": "securepassword"
+ {  
+  "username": "newuser",  
+  "email": "newuser@example.com",  
+  "password": "securepassword"  
 }
