@@ -101,3 +101,22 @@ The backend server will be running at http://127.0.0.1:5000/.
 
 
 The frontend development server will be running at http://localhost:3000/.
+
+## Usage
+Once both the backend and frontend servers are running, you can access the Safari Atlas application by visiting http://localhost:3000/ in your web browser.
+
+### Testing APIs with Thunder Client
+You can use Thunder Client in Visual Studio Code to test the API endpoints. Here are some example requests:
+
+1. Register a New User
+- Endpoint: /register
+
+- Method: POST
+
+- Body:
+
+ {
+  "username": "newuser",
+  "email": "newuser@example.com",
+  "password": "securepassword"
+}
