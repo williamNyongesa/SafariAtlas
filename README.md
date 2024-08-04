@@ -58,3 +58,13 @@ Log in an existing user.
 - POST /logout  
 Log out the current user.
 
+## Installation and Setup
+Follow these steps to set up the Safari Map project locally.
+
+### Prerequisites
+Ensure you have the following software installed:
+
+- Python 3.8+
+- Node.js 14+
+- npm 6+
+
