@@ -133,3 +133,13 @@ You can use Thunder Client in Visual Studio Code to test the API endpoints. Here
   "password": "securepassword"  
 }
 
+3. Get All Locations
+- Endpoint: /location
+
+- Method: GET
+
+- Headers:
+
+- Authorization: Bearer <your-token>
+
+
