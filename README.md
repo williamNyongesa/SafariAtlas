@@ -22,12 +22,12 @@ Others: HTML5, CSS3, JavaScript (ES6), Bootstrap
 Here's a detailed list of the available API endpoints:
 
 1. Index
-- GET / .
+- GET /   .    
 Returns a welcome message for the Safari Map API.
 2. User
-- GET /users
-Fetch a list of all users.
-
-- GET /user/<int:user_id>
+- GET /users  
+Fetch a list of all users.  
+ 
+- GET /user/<int:user_id>  
 Fetch a specific user's details by user ID.
 
