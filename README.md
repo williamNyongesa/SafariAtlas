@@ -72,17 +72,17 @@ Ensure you have the following software installed:
 
 1. Clone the Repository:
 git clone https://github.com/yourusername/safari-map.git  
-cd safari-map/safari-map-server
+- cd safari-map/safari-map-server
 
 2. Install Dependencies:
 pipenv install
 
 3. Create the Database:
-pipenv run flask db init  
-pipenv run flask db migrate  
-pipenv run flask db upgrade
+- pipenv run flask db init  
+- pipenv run flask db migrate  
+- pipenv run flask db upgrade
 
 4. Run the Backend Server:
-pipenv run flask run  
+- pipenv run flask run  
   
 The backend server will be running at http://127.0.0.1:5000/.
