@@ -143,3 +143,15 @@ You can use Thunder Client in Visual Studio Code to test the API endpoints. Here
 - Authorization: Bearer <your-token>
 
 
+## Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue with any suggestions, bug reports, or feature requests.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+For any inquiries or support, please contact:
+
+- William Nyongesa
+- Email: marakawilliam@gmail.com
+- GitHub: [(https://github.com/williamNyongesa)]
