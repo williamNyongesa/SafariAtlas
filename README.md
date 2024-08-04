@@ -154,4 +154,4 @@ For any inquiries or support, please contact:
 
 - William Nyongesa
 - Email: marakawilliam@gmail.com
-- GitHub: [(https://github.com/williamNyongesa)]
+- GitHub: [https://github.com/williamNyongesa]
