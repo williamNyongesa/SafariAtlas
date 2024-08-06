@@ -1,7 +1,7 @@
 
 
-# 🦁  Safari Atlas : Explore the Kenya with Ease
-
+# 🦁  Safari Atlas: Navigate Kenya with Ease
+  
 ## Overview
 Safari Map is a powerful and interactive web application designed to help users explore and manage locations and weather data for safaris. Whether you're planning a expedition or simply curious about different locations, Safari Atlas provides all the tools you need for an exciting and informative experience.
 
