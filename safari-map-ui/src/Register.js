@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './Register.css'; // Import a CSS file for styling
 
 function Register() {
+    // State hooks for form inputs and UI states
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    const navigate = useNavigate(); // Use useNavigate instead of useHistory
+    const navigate = useNavigate();
 
+    // Form validation function
     const validateForm = () => {
-        if (!username || !email || !password) {
+        if (!username || !email || !password || !confirmPassword) {
             setError('All fields are required');
             return false;
         }
@@ -25,9 +29,14 @@ function Register() {
             setError('Password must be at least 6 characters long');
             return false;
         }
+        if (password !== confirmPassword) {
+            setError('Passwords do not match');
+            return false;
+        }
         return true;
     };
 
+    // Handle form submission
     const handleRegister = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
@@ -69,6 +78,7 @@ function Register() {
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Enter your username"
                     />
                 </div>
                 <div className="form-group">
@@ -77,6 +87,7 @@ function Register() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email"
                     />
                 </div>
                 <div className="form-group">
@@ -86,6 +97,7 @@ function Register() {
                             type={showPassword ? 'text' : 'password'}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Enter your password"
                         />
                         <button
                             type="button"
@@ -93,6 +105,24 @@ function Register() {
                             onClick={() => setShowPassword(!showPassword)}
                         >
                             {showPassword ? 'Hide' : 'Show'}
+                        </button>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label>Confirm Password:</label>
+                    <div className="password-input-container">
+                        <input
+                            type={showConfirmPassword ? 'text' : 'password'}
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            placeholder="Confirm your password"
+                        />
+                        <button
+                            type="button"
+                            className="toggle-password-btn"
+                            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        >
+                            {showConfirmPassword ? 'Hide' : 'Show'}
                         </button>
                     </div>
                 </div>
