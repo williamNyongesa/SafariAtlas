@@ -1,7 +1,7 @@
 from faker import Faker
 from app import app, db
 from models import User, Location, Weather
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash 
 
 fake = Faker()
 

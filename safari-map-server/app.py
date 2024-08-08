@@ -93,15 +93,16 @@ class Register(Resource):
         db.session.commit()
         return {"message": "User created successfully"}, 201
 
+
 class Login(Resource):
     def post(self):
         data = request.get_json()
-        user = User.query.filter_by(username=data['username']).first()
+        user = User.query.filter_by(email=data['email']).first()  
         if user and user.check_password(data['password']):
             login_user(user)
             return {"message": "Logged in successfully"}, 200
         else:
-            return {"message": "Invalid username or password"}, 400
+            return {"message": "Invalid email or password"}, 400
 
 class Logout(Resource):
     @login_required
