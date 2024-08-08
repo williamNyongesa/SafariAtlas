@@ -1,0 +1,84 @@
+/* Login.css */
+
+/* Container styling for centering and spacing */
+.login-container {
+    max-width: 400px; /* Limit the width of the form */
+    margin: 50px auto; /* Center the form horizontally */
+    padding: 20px; /* Space inside the container */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background */
+}
+
+/* Form heading style */
+h2 {
+    text-align: center; /* Center the text */
+    color: #333; /* Dark gray text */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Style for form groups containing label and input */
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+/* Label styling */
+.form-group label {
+    display: block; /* Full width label */
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Bold text for labels */
+    color: #555; /* Medium gray text */
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Space inside input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded input corners */
+    font-size: 16px; /* Slightly larger text */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+/* Change input border color on focus */
+.form-group input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for the login button */
+.login-button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Space inside button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded button corners */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Change button color on hover */
+.login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Disabled button styling */
+.login-button:disabled {
+    background-color: #ccc; /* Gray background when disabled */
+    cursor: not-allowed; /* Not-allowed cursor */
+}
+
+/* Styling for error messages */
+.error-message {
+    color: red; /* Red text for errors */
+    background-color: #fdd; /* Light red background */
+    padding: 10px; /* Space inside error message */
+    border: 1px solid #f99; /* Light red border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below error message */
+    text-align: center; /* Center the error message */
+}

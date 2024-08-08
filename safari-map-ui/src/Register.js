@@ -45,14 +45,18 @@ function Register() {
         setError('');
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/register', {
+            const response = await fetch('http://127.0.0.1:5001/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, email, password }),
             });
 
+            console.log("Response status:", response.status);
+
             if (!response.ok) {
-                throw new Error('Failed to register');
+                const errorData = await response.json(); // Capture error message from server
+                console.log("Error response:", errorData);
+                throw new Error(errorData.message || 'Failed to register');
             }
 
             const data = await response.json();
@@ -61,6 +65,7 @@ function Register() {
             // Redirect to login or another page after successful registration
             navigate('/login');
         } catch (error) {
+            console.error('Error registering user:', error);
             setError('Error registering user: ' + error.message);
         } finally {
             setLoading(false);

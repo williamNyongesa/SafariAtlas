@@ -1,29 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Locations() {
-    let [locations, setLocations] = useState([]);
+    const [locations, setLocations] = useState([]); 
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
     useEffect(() => {
+        const fetchLocations = async () => {
+            try {
+                const response = await fetch('http://127.0.0.1:5001/locations');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch locations');
+                }
+                const data = await response.json();
+                setLocations(data);
+                setLoading(false);
+            } catch (error) {
+                setError(error.message);
+                setLoading(false);
+            }
+        };
+
         fetchLocations();
     }, []);
 
-    const fetchLocations = async () => {
-        try {
-            let response = await fetch('http://127.0.0.1:5000/location');
-            let data = await response.json();
-            setLocations(data.locations);
-        } catch (error) {
-            console.error('Error fetching locations:', error);
-        }
-    };
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <div>
             <h2>Locations</h2>
             <ul>
-                {locations.map(location => (
+                {locations.map((location) => (
                     <li key={location.id}>
-                        {location.name} - Lat: {location.latitude}, Long: {location.longitude}
+                        {location.name} - Latitude: {location.latitude}, Longitude: {location.longitude}
                     </li>
                 ))}
             </ul>

@@ -11,8 +11,8 @@ function Home() {
                     <li><Link to="/locations">View Locations</Link></li>
                     <li><Link to="/profile">User Profile</Link></li>
                     <li><Link to="/weather">Weather Information</Link></li>
-                    <li><Link to="/register">Register</Link></li>
-                    <li><Link to="/login">Login</Link></li>
+                    {/* <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/login">Login</Link></li> */}
                 </ul>
             </nav>
         </div>

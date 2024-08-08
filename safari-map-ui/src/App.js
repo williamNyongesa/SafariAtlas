@@ -7,13 +7,15 @@ import Weather from './Weather';
 import UserProfile from './UserProfile';
 import Register from './Register';
 import Login from './Login';
+import LandingPage from './LandingPage';
 
 function App() {
     return (
         <Router>
             <div>
                 <Routes>
-                    <Route path='/' element={<Home/>}/>
+                    <Route path='/' element={<LandingPage/>}/>
+                    <Route path='/home' element={<Home/>}/>
                     <Route path="/locations" element={<Locations />} />
                     <Route path="/weather" element={<Weather />} />
                     <Route path="/profile" element={<UserProfile />} />
