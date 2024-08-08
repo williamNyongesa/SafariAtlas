@@ -15,7 +15,7 @@ def seed_users(n):
             username=fake.user_name(),
             email=fake.email(),
         )
-        user.set_password("password")  # Set a default password for all users
+        user.set_password("34522097")
         db.session.add(user)
     db.session.commit()
 
