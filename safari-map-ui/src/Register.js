@@ -54,7 +54,7 @@ function Register() {
             console.log("Response status:", response.status);
 
             if (!response.ok) {
-                const errorData = await response.json(); // Capture error message from server
+                const errorData = await response.json(); 
                 console.log("Error response:", errorData);
                 throw new Error(errorData.message || 'Failed to register');
             }
@@ -62,7 +62,6 @@ function Register() {
             const data = await response.json();
             console.log('Registration successful:', data);
 
-            // Redirect to login or another page after successful registration
             navigate('/login');
         } catch (error) {
             console.error('Error registering user:', error);

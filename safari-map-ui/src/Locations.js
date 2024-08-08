@@ -8,7 +8,7 @@ function Locations() {
     useEffect(() => {
         const fetchLocations = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:5001/locations');
+                const response = await fetch('http://127.0.0.1:5001/location');
                 if (!response.ok) {
                     throw new Error('Failed to fetch locations');
                 }

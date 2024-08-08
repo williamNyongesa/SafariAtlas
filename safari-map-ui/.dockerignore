@@ -1,0 +1,10 @@
+node_modules
+*.log
+.env
+dist
+build
+.git
+Dockerfile
+.dockerignore
+.DS_Store
+Thumbs.db
