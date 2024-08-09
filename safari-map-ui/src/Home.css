@@ -24,4 +24,9 @@
   .home-card button {
     margin-top: 0.5rem;
   }
-  
+  li{
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 700;
+  }

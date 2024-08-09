@@ -24,13 +24,20 @@ function Login() {
                 body: JSON.stringify({ email, password }),
             });
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                console.error('Error data from server:', errorData); // Log error details
-                throw new Error(errorData.message || 'Failed to login');
-            }
-
+            // if (!response.ok) {
+            //     const errorData = await response.json();
+            //     console.error('Error data from server:', errorData); // Log error details
+            //     throw new Error(errorData.message || 'Failed to login');
+            // }
             const data = await response.json();
+            if (response.ok) {
+                // Store session or token
+                sessionStorage.setItem('userToken', data.token);
+              } else {
+                console.error(data.message);
+              }
+            console.log("this is the data: "+data)
+
             console.log('Login successful:', data);
 
             // Redirect to home page after successful login

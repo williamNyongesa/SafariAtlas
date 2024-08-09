@@ -7,6 +7,8 @@ import './Home.css'; // Make sure to create this CSS file for additional styling
 function Home() {
   return (
     <Container maxWidth="lg" className="home-container">
+      <Button variant="contained" color="secondary" component={Link} to="/"> Logout </Button>
+
       <Box textAlign="center" mb={4}>
         <Typography variant="h2" gutterBottom>Welcome to Safari Map</Typography>
         <Typography variant="h6" color="textSecondary">Your gateway to exploring and managing locations and weather data with ease.</Typography>
