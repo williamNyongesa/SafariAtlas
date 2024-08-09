@@ -32,7 +32,7 @@ function Login() {
             const data = await response.json();
             if (response.ok) {
                 // Store session or token
-                sessionStorage.setItem('userToken', data.token);
+                sessionStorage.setItem('userToken', JSON.stringify({ email, password }));
               } else {
                 console.error(data.message);
               }
